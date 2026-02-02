@@ -69,15 +69,15 @@
 # Configure Zeek
 ####################################################################
 
-- name: Enable Zeek logging in JSON format
-  become: true
-  lineinfile:
-    path: '/opt/zeek/share/zeek/site/local.zeek'
-    line: '{{ item }}'
-  with_items:
-    - '# Enable Zeek logging in JSON format'
-    - 'redef LogAscii::json_timestamps = JSON::TS_ISO8601;'
-    - 'redef LogAscii::use_json = T;'
+# - name: Enable Zeek logging in JSON format
+#   become: true
+#   lineinfile:
+#     path: '/opt/zeek/share/zeek/site/local.zeek'
+#     line: '{{ item }}'
+#   with_items:
+#     - '# Enable Zeek logging in JSON format'
+#     - 'redef LogAscii::json_timestamps = JSON::TS_ISO8601;'
+#     - 'redef LogAscii::use_json = T;'
 
 - name: Create scripts directory for custom Zeek scripts
   become: true
