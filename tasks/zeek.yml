@@ -78,6 +78,8 @@
     - '# Enable Zeek logging in JSON format'
     - 'redef LogAscii::json_timestamps = JSON::TS_ISO8601;'
     - 'redef LogAscii::use_json = T;'
+    - '# Ignore checksum errors - needed for Proxmox virtual NICs'
+    - 'redef ignore_checksums = T;'
 
 - name: Create scripts directory for custom Zeek scripts
   become: true
